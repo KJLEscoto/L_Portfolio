@@ -103,12 +103,12 @@ p {
     bottom: 105px;
     left: 5px;
     outline: none;
-    animation: pulse 1.5s infinite;
     cursor: pointer;
+    animation: none;
 }
 
-.audio-btn.no-pulse {
-    animation: none;
+.audio-btn.pulse {
+    animation: pulse 1.5s infinite;
 }
 
 .audio-btn:hover {

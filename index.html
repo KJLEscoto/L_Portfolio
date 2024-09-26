@@ -32,11 +32,11 @@
             <img class="me" src="img/me.jpg" alt="me">
 
             <!-- audio -->
-            <audio autoplay loop id="audio" src="outlaw.mp3"></audio>
+            <audio loop id="audio" src="outlaw.mp3"></audio>
 
             <div>
                 <button id="playPauseBtn" class="audio-btn">
-                    Pause Music
+                    Play Music
                 </button>
             </div>
 
@@ -47,12 +47,12 @@
                 playPauseBtn.addEventListener('click', function() {
                     if (audio.paused) {
                         audio.play();
-                        playPauseBtn.textContent = "Pause Music";  // Change button text to 'Pause'
-                        playPauseBtn.classList.remove('no-pulse');    // Remove pulse animation
+                        playPauseBtn.textContent = "Pause Music";   // Change button text to 'Play'
+                        playPauseBtn.classList.add('pulse'); // Restore pulse animation
                     } else {
                         audio.pause();
-                        playPauseBtn.textContent = "Play Music";   // Change button text to 'Play'
-                        playPauseBtn.classList.add('no-pulse'); // Restore pulse animation
+                        playPauseBtn.textContent = "Play Music";  // Change button text to 'Pause'
+                        playPauseBtn.classList.remove('pulse');    // Remove pulse animation
                     }
                 });
             </script>
