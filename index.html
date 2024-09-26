@@ -1,0 +1,127 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body class="container">
+
+    <!-- navigation bar -->
+    <nav class="navbar" >
+        <ul class="nav-items">
+            <a href="#home" class="navlink"><li>Home</li></a>
+            <a href="#about-me" class="navlink"><li>About Me</li></a>
+            <a href="#favorites-projects" class="navlink"><li>Favorites / Projects</li></a>
+            <a href="#my-talents" class="navlink"><li>My Talents</li></a>
+            <a href="#html-activities" class="navlink"><li>HTML Activities</li></a>
+        </ul>
+    </nav>
+
+    <main id="home">
+
+        <!-- header -->
+        <div class="text-header">   
+            <h2>Hi!</h2>
+            <h1>I'm <span class="red-text">Leah Lamorin</span>,</h1>
+            <p>BSCS Student. <span class="red-text">My Portfolio.</span></p>
+        </div>
+
+        <div class="hero">
+            <img class="me" src="img/me.jpg" alt="me">
+
+            <!-- audio -->
+            <audio autoplay loop id="audio" src="outlaw.mp3"></audio>
+
+            <div>
+                <button id="playPauseBtn" class="audio-btn">
+                    Pause Music
+                </button>
+            </div>
+
+            <script>
+                const playPauseBtn = document.getElementById('playPauseBtn');
+                const audio = document.getElementById('audio');
+
+                playPauseBtn.addEventListener('click', function() {
+                    if (audio.paused) {
+                        audio.play();
+                        playPauseBtn.textContent = "Pause Music";  // Change button text to 'Pause'
+                        playPauseBtn.classList.remove('no-pulse');    // Remove pulse animation
+                    } else {
+                        audio.pause();
+                        playPauseBtn.textContent = "Play Music";   // Change button text to 'Play'
+                        playPauseBtn.classList.add('no-pulse'); // Restore pulse animation
+                    }
+                });
+            </script>
+        </div>
+    </main>
+
+    <hr id="about-me">
+
+    <section class="about">
+
+        <!-- about me -->
+        <div class="headline">About Me</div>
+
+        <p>I am Leah Lamorin, a BSCS student from UIC. I was born and raised in Davao. I've always been passionate about learning and trying new things, which I enjoyed about being in challenging life events. Ive always dreamt of being part of the Google Developer Team, which made the UIC likely a dream. </p>
+        <p>In my first year of college, I was a part of the GDSC, which helped me reach various activities and programs that opened our minds to communicating and helped me adopt new learning and skills that I could practice and master.</p>
+
+        <!-- images -->
+        <div class="img-container">
+            <img class="gdsc-1" src="img/gdsc_1.png" alt="gdsc_1">
+            <div>
+                <img class="gdsc-2" src="img/gdsc_2.jpg" alt="gdsc_2">
+                <img class="gdsc-3" src="img/gdsc_3.jpg" alt="gdsc_3">
+            </div>
+        </div>
+    </section>
+
+    <hr id="favorites-projects">
+
+    <section class="favorites-projects">
+
+        <!-- favorites -->
+        <h1 class="headline">My Favorites</h1>
+        <ul class="fave">
+            <li>Keeping myself busy</li>
+            <li>Reading books</li>
+            <li>Working out</li>
+        </ul>
+
+        <!-- projects -->
+        <h1 class="headline">School Projects</h1>
+        <ol class="proj">
+            <li>Travelry Safe (Online App System)</li>
+            <li>Electricity & Water Payment (Online App System)</li>
+            <li>ComeBuy Ordering System (Kiosk Type System)</li>
+            <li>Online Voting System</li>
+        </ol>
+    </section>
+    
+    <hr id="my-talents">
+
+    <section class="talents">
+
+        <!-- talents -->
+        <h1 class="headline">My Talents</h1>
+
+        <p>Dancing allows me to connect with music that has an impact on my body, minds, and thoughts. I've learned a lot about life, myself, and how to listen to and comprehend my emotions by means of dance. </p>
+        <p class="text-lg">Also, My favorite sport is volleyball since it's an ideal means to have fun and stay active. It's a fun activity to play since it requires working together, communicating, and strategy.</p>
+    </section>
+
+    <hr id="html-activities">
+
+    <section class="html-act">
+
+        <!-- html activities -->
+        <h1 class="headline">HTML Activities</h1>
+
+        <div class="btn-container">
+            <a href="/fashion-blog.html" class="btn">Fashion Blog</a>
+        </div>
+    </section>
+</body>
+</html>
